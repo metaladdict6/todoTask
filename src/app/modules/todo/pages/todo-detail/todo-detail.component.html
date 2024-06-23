@@ -1,0 +1,48 @@
+<mat-card class="body-container">
+    <mat-card-header>
+        <mat-card-title>Actions Buttons</mat-card-title>
+        <mat-card-subtitle>Start</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+        <div class="input-container">
+            <mat-form-field class="input">
+                <mat-label>Name</mat-label>
+                <input matInput [value]="todo.name" >
+            </mat-form-field>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="input-container">
+            <mat-form-field class="input">
+                <mat-label>Type of todo</mat-label>
+                <mat-select [value]="currentTypeSelection">
+                    <mat-option *ngFor="let type of typeSelection" [value]="type" >{{type}}</mat-option>
+                  </mat-select>
+              </mat-form-field>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="input-container">
+            <mat-form-field class="input">
+                <mat-label >Textarea</mat-label>
+                <textarea matInput [value]="todo.description"></textarea>
+            </mat-form-field> 
+        </div>
+
+        <mat-divider></mat-divider>
+        
+        <div class="input-container">
+            <mat-chip-set aria-label="Fish selection">
+                <mat-chip *ngFor="let item of todo.tasks">{{item}}</mat-chip>
+            </mat-chip-set>
+        </div>
+      
+        <mat-card-actions align="start">
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+    </mat-card-content>
+</mat-card>
