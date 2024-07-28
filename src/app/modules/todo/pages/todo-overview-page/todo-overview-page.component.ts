@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../../../shared/models/todo';
 import { TODO_MOCK_DATA } from '../../../../core/mock/todo-mock';
-import { DataSource } from '@angular/cdk/collections';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo-overview-page',

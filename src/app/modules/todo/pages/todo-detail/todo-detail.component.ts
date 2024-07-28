@@ -28,4 +28,21 @@ export class TodoDetailComponent implements OnInit {
     });
   }
   
+
+  save() {
+    if (this.todo.id) {
+      this.updateTodo();
+    } else {
+      this.saveTodo();
+    }
+  }
+  
+  saveTodo() {
+    throw new Error('Method not implemented.');
+  }
+
+  updateTodo() {
+    throw new Error('Method not implemented.');
+  }
+
 }

@@ -13,12 +13,14 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatCardModule} from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatButtonModule } from '@angular/material/button';
+import { CountTasksPipe } from '../../shared/pipes/countTask/count-tasks.pipe';
 
 
 @NgModule({
   declarations: [
     TodoDetailComponent,
-    TodoOverviewPageComponent
+    TodoOverviewPageComponent,
+    CountTasksPipe
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatChipsModule,
     MatCardModule,
     MatDividerModule, 
-    MatButtonModule
+    MatButtonModule, 
+  ],
+  providers: [
+    CountTasksPipe
   ]
 })
 export class TodoModule { }

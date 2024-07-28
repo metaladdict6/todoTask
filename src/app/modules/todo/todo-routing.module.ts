@@ -5,7 +5,9 @@ import { TodoDetailComponent } from './pages/todo-detail/todo-detail.component';
 
 const routes: Routes = [
   {path: 'overview', component: TodoOverviewPageComponent},
-  {path: 'details/:id', component: TodoDetailComponent}
+  {path: 'details/:id', component: TodoDetailComponent},
+  {path: 'details/', component: TodoDetailComponent}
+
 ];
 
 @NgModule({
